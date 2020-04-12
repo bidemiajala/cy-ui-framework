@@ -1,0 +1,27 @@
+{
+  "name": "igr-cy",
+  "version": "1.0.0",
+  "description": "Testing a sample login function with Cypress.io",
+  "main": "index.js",
+  "scripts": {
+    "clean:reports": "rm -R -f cypress/reports && mkdir cypress/reports && mkdir cypress/reports/mochareports",
+    "pretest": "npm run clean:reports",
+    "scripts": "cypress run",
+    "combine-reports": "mochawesome-merge --reportDir cypress/reports/mocha > cypress/reports/mochareports/report.json",
+    "generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports",
+    "posttest": "npm run combine-reports && npm run generate-report",
+    "test": "npm run scripts || npm run posttest"
+  },
+  "author": "Bidemi Ajala",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^4.3.0",
+    "cypress-cucumber-preprocessor": "^2.3.0",
+    "cypress-multi-reporters": "^1.2.4",
+    "mocha": "^7.1.1",
+    "mochawesome": "^6.0.0",
+    "mochawesome-merge": "^4.0.3",
+    "mochawesome-report-generator": "^5.0.0"
+  },
+  "dependencies": {}
+}
