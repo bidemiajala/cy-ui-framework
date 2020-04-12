@@ -14,6 +14,7 @@ Run the following from the terminal:
 ##### `npm install cypress --save-dev`
 ##### `npm run test`
 
+Application under test is [Nop Commerce Demo](https://admin-demo.nopcommerce.com).
 
 I hope this was useful to you. All suggestions are welcome so please feel free to contribute and correct where necessary.
 
