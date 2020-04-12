@@ -17,4 +17,4 @@ Run the following from the terminal:
 
 I hope this was useful to you. All suggestions are welcome so please feel free to contribute and correct where necessary.
 
-Visit my [personal site](https://bit.ly/2tUZMmD)
+Say [hi!](https://bit.ly/2tUZMmD)
