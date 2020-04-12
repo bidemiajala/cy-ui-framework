@@ -6,7 +6,7 @@ function User (email, password, first, last) {
     this.password = password;
     this.firstName = first;
     this.lastName = last;
-    }
+    };
     
     //Following the constructor structure, email is the first element and the rest follow
     const johnSmith = new User("admin@yourstore.com", "admin", "John", "Smith");

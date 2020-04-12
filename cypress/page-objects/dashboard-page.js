@@ -4,26 +4,26 @@
 class DashboardPage {
 
     visit() {
-        cy.visit("/admin")
-        cy.log('Visited admin page')
-    }
+        cy.visit("/admin");
+        cy.log('Visited admin page');
+    };
 
     title() {
-        const pageTitle = "Dashboard / nopCommerce administration"
-        return pageTitle
-    }
+        const pageTitle = "Dashboard / nopCommerce administration";
+        return pageTitle;
+    };
 
     accountInfo() {
-        const accountName = cy.get(`.account-info`)
-        return accountName
-    }
+        const accountName = cy.get(`.account-info`);
+        return accountName;
+    };
 
     clickLogout() {
-        const logoutButton = cy.get('a[href*="logout"]')
-        logoutButton.click()
-        cy.log('Clicked logout button')
-    }
+        const logoutButton = cy.get('a[href*="logout"]');
+        logoutButton.click();
+        cy.log('Clicked logout button');
+    };
 
-}
+};
 
-export default DashboardPage
+export default DashboardPage;
