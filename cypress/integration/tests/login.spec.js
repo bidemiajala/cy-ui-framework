@@ -31,7 +31,7 @@ describe("Login Test Suite", () => {
     });
 
     //Tries to login with invalid user details
-    it("Login with invalid ecredentials should not be successful", () => {
+    it("Login with invalid credentials should not be successful", () => {
         lp.enterEmail(randomUser.email);
         lp.enterPassword(randomUser.password);
         lp.clickLogin();

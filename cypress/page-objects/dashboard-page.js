@@ -13,6 +13,11 @@ class DashboardPage {
         return pageTitle;
     };
 
+    pageHeader() {
+        const pageHeader = cy.get(`.content-header > h1`);
+        return pageHeader;
+    };
+
     accountInfo() {
         const accountName = cy.get(`.account-info`);
         return accountName;

@@ -5,11 +5,19 @@
     "reporterOptions": {
         "reporterEnabled": "mochawesome",
         "mochawesomeReporterOptions": {
-            "reportDir": "cypress/reports/mocha",
+            "reportDir": "cypress/reports/mochareports",
             "quite": true,
-            "overwrite": false,
+            "overwrite": true,
             "html": true,
-            "json": true
+            "json": false
         }
-    }
+    },
+    "testFiles": "**/*{feature,spec.js}",
+
+    "trashAssetsBeforeRuns": true,
+
+    "viewportHeight": 768,
+    "viewportWidth": 1024
+
+
 }
