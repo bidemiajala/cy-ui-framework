@@ -21,4 +21,4 @@ Application under test is [Nop Commerce Demo](https://admin-demo.nopcommerce.com
 
 I hope this was useful to you. All suggestions are welcome so please feel free to contribute and correct where necessary.
 
-Say [hi!](https://bit.ly/2tUZMmD)
+Say [hi!](https://bidemi.xyz)
