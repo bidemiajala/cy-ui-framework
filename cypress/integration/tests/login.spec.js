@@ -38,9 +38,11 @@ describe("Login Test Suite", () => {
         lp.loginError().contains("Login was unsuccessful. Please correct the errors and try again.");
     });
 
-    //Tries to login with invalid user details
-    it("Empty credentials should show an error message", () => {
-        lp.clickLogin();
-        lp.emailError().contains("Please enter your email");
-    });
+    // //Tries to login with invalid user details
+    // it("Empty credentials should show an error message", () => {
+    //     lp.enterEmail();
+    //     lp.enterPassword();
+    //     lp.clickLogin();
+    //     lp.emailError().contains("Please enter your email");
+    // });
 });
