@@ -1,23 +1,19 @@
 {
-    "baseUrl": "https://admin-demo.nopcommerce.com",
-
-    "reporter": "cypress-multi-reporters",
-    "reporterOptions": {
-        "reporterEnabled": "mochawesome",
-        "mochawesomeReporterOptions": {
-            "reportDir": "cypress/reports/mochareports",
-            "quite": true,
-            "overwrite": true,
-            "html": true,
-            "json": false
-        }
-    },
-    "testFiles": "**/*{feature,spec.js}",
-
-    "trashAssetsBeforeRuns": true,
-
-    "viewportHeight": 768,
-    "viewportWidth": 1024
-
-
+  "baseUrl": "https://admin-demo.nopcommerce.com",
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "reporterEnabled": "mochawesome",
+    "mochawesomeReporterOptions": {
+      "reportDir": "cypress/reports/mochareports",
+      "quite": true,
+      "overwrite": true,
+      "html": true,
+      "json": false
+    }
+  },
+  "testFiles": "**/*{feature,spec.js}",
+  "trashAssetsBeforeRuns": true,
+  "viewportHeight": 768,
+  "viewportWidth": 1024,
+  "projectId": "wmsdoh"
 }
