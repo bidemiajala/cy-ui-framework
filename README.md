@@ -1,7 +1,6 @@
 # Cypress Page Object Model Pattern (UI)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/82114c3232e84038b6dfbf66cfe01360)](https://www.codacy.com/manual/bidemiajala/cy-ui-framework?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bidemiajala/cy-ui-framework&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/82114c3232e84038b6dfbf66cfe01360)](https://www.codacy.com/manual/bidemiajala/cy-ui-framework?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bidemiajala/cy-ui-framework&amp;utm_campaign=Badge_Grade)  ![Parallel Tests](https://github.com/bidemiajala/cy-ui-framework/workflows/Parallel%20Tests/badge.svg)
 
-![Parallel Tests](https://github.com/bidemiajala/cy-ui-framework/workflows/Parallel%20Tests/badge.svg)
 
 This is a web UI testing page object model pattern framework built for Cypress.io using Javascript.
 
