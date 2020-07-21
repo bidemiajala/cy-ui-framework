@@ -15,7 +15,7 @@ Run the following from the terminal:
 ##### `npm install cypress --save-dev`
 ##### `npm run test`
 
-For Cucumber, run:
+For Cucumber, run the following:
 ##### `npm install --save-dev cypress-cucumber-preprocessor`
 
 Application under test is [Nop Commerce Demo](https://admin-demo.nopcommerce.com).
