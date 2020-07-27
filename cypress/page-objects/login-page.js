@@ -1,55 +1,25 @@
 /// <reference types = "Cypress" />
 
 //Created the login page object. More elements and actions can be added here
-class LoginPage {
-
-    visit() {
-        cy.visit("/login");
-        cy.log('Visited login page');
-    };
-
-    title() {
-        const pageTitle = "Your store. Login";
-        return pageTitle;
-    };
-
-    emailError() {
-        const emailErrorField = cy.get('[id = Email-error]');
-        return emailErrorField;
-    };
-
-    loginError() {
-        const loginErrorMessageField = cy.get(".message-error");
-        return loginErrorMessageField;
-    };
-
-    pageHeading() {
-        const pageHeading = cy.get(".page-title > h1");
-        return pageHeading;
-    };
+export class LoginPage {
+    title = "Your store. Login";
+    get visit () { return cy.visit("/login") };
+    get emailField () { return cy.get('[id = Email]') };
+    get passwordField () { return cy.get('[id = Password]') };
+    get loginButton () { return cy.get(".button-1") };
+    get emailError () { return cy.get('[id = Email-error]') };
+    get pageHeading () { return cy.get(".page-title > h1") };
+    get loginError () { return cy.get(".message-error") };
 
     enterEmail(value) {
-        const emailField = cy.get('[id = Email]');
-        emailField.clear();
-        emailField.type(value);
-        cy.log('Entered email');
+        this.emailField.clear();
+        this.emailField.type(value);
         return this;
     };
 
     enterPassword(value) {
-        const passwordField = cy.get('[id = Password]');
-        passwordField.clear();
-        passwordField.type(value);
-        cy.log('Entered password');
+        this.passwordField.clear();
+        this.passwordField.type(value);
         return this;
     };
-
-    clickLogin() {
-        const loginButton = cy.get(".button-1");
-        loginButton.click();
-        cy.log('Clicked login button');
-    };
-
 };
-
-export default LoginPage;
