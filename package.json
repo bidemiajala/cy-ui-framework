@@ -15,9 +15,16 @@
   "author": "Bidemi Ajala",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^4.11.0",
+    "cypress": "^5.0.0",
     "cypress-cucumber-preprocessor": "^2.3.0",
     "cypress-multi-reporters": "^1.4.0",
+    "eslint": "^7.7.0",
+    "eslint-plugin-cypress": "^2.11.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.0",
+    "faker": "^4.1.0",
     "mocha": "^7.2.0",
     "mochawesome": "^6.1.1",
     "mochawesome-merge": "^4.1.0",
@@ -26,5 +33,7 @@
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
   },
-  "dependencies": {}
+  "dependencies": {
+    "eslint-config-airbnb": "^18.2.0"
+  }
 }
