@@ -1,9 +1,13 @@
-/// <reference types = "Cypress" />
+class DashboardPage {
+    title = 'Dashboard / nopCommerce administration';
 
-export class DashboardPage {
-    title = "Dashboard / nopCommerce administration";
-    get visit() { return cy.visit("/admin") };
-    get pageHeader() { return cy.get(`.content-header > h1`) };
-    get accountInfo() { return cy.get(`.account-info`) };
-    get logoutButton() { return cy.get('a[href*="logout"]') };
+    visit = "/admin";
+
+    pageHeader = '.content-header > h1';
+
+    accountInfo = `.account-info`;
+
+    logoutButton = 'a[href*="logout"]';
 };
+
+export default DashboardPage;
