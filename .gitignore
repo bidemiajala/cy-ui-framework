@@ -4,5 +4,5 @@ videos
 screenshots
 mochawesome-report
 reports
-package-lock.json
+/package-lock.json
 .gitignore
