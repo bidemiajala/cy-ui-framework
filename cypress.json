@@ -11,6 +11,12 @@
       "json": false
     }
   },
+  "retries": {
+    "runMode": 3,
+    "openMode": 2
+  },
+  "responseTimeOut": 60000,
+  "requestTimeout": 60000,
   "testFiles": "**/*{feature,spec.js}",
   "trashAssetsBeforeRuns": true,
   "viewportHeight": 768,
