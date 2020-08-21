@@ -1,55 +1,21 @@
-/// <reference types = "Cypress" />
-
-//Created the login page object. More elements and actions can be added here
 class LoginPage {
+    title = 'Your store. Login';
 
-    visit() {
-        cy.visit("/login");
-        cy.log('Visited login page');
-    };
+    url = '/login'
 
-    title() {
-        const pageTitle = "Your store. Login";
-        return pageTitle;
-    };
+    emailField = '[id = Email]';
 
-    emailError() {
-        const emailErrorField = cy.get('[id = Email-error]');
-        return emailErrorField;
-    };
+    passwordField = '[id = Password]';
 
-    loginError() {
-        const loginErrorMessageField = cy.get(".message-error");
-        return loginErrorMessageField;
-    };
+    loginButton = '.button-1';
 
-    pageHeading() {
-        const pageHeading = cy.get(".page-title > h1");
-        return pageHeading;
-    };
+    emailError = '[id = Email-error]';
 
-    enterEmail(value) {
-        const emailField = cy.get('[id = Email]');
-        emailField.clear();
-        emailField.type(value);
-        cy.log('Entered email');
-        return this;
-    };
+    pageHeading = '.page-title > h1';
 
-    enterPassword(value) {
-        const passwordField = cy.get('[id = Password]');
-        passwordField.clear();
-        passwordField.type(value);
-        cy.log('Entered password');
-        return this;
-    };
+    loginError = '.message-error';
 
-    clickLogin() {
-        const loginButton = cy.get(".button-1");
-        loginButton.click();
-        cy.log('Clicked login button');
-    };
-
+    welcomeMessage = 'strong';
 };
 
 export default LoginPage;

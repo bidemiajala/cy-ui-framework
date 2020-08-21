@@ -1,34 +1,13 @@
-/// <reference types = "Cypress" />
-
-//Created the dashboard page object. More elements and actions can be added here
 class DashboardPage {
+    title = 'Dashboard / nopCommerce administration';
 
-    visit() {
-        cy.visit("/admin");
-        cy.log('Visited admin page');
-    };
+    visit = "/admin";
 
-    title() {
-        const pageTitle = "Dashboard / nopCommerce administration";
-        return pageTitle;
-    };
+    pageHeader = '.content-header > h1';
 
-    pageHeader() {
-        const pageHeader = cy.get(`.content-header > h1`);
-        return pageHeader;
-    };
+    accountInfo = `.account-info`;
 
-    accountInfo() {
-        const accountName = cy.get(`.account-info`);
-        return accountName;
-    };
-
-    clickLogout() {
-        const logoutButton = cy.get('a[href*="logout"]');
-        logoutButton.click();
-        cy.log('Clicked logout button');
-    };
-
+    logoutButton = 'a[href*="logout"]';
 };
 
 export default DashboardPage;

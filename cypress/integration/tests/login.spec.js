@@ -1,48 +1,47 @@
-/// <reference types = "Cypress" />
+import { LoginPage, DashboardPage } from '../../page-objects';
+import { johnSmith, randomUser } from '../../data';
 
-import LoginPage from "../../page-objects/login-page"; //Imports login page object
-import DashboardPage from "../../page-objects/dashboard-page"; //Imports dashboard page object
-import {johnSmith} from "../../data/users"; //Imports John Smith user from User object
-import {randomUser} from "../../data/users"; //Imports Random User from User object
+const loginPage = new LoginPage();
+const dashboardPage = new DashboardPage();
 
-describe("Login Test Suite", () => {
-
-    //Runs before each test case. Sets viewport and visits the page
-    beforeEach( () => {
-        cy.viewport(1024, 768);
-        cy.log("Using 1024 * 768 screen size");
-        lp.visit();
+describe('Login Test Suite', () => {
+    beforeEach(() => {
+        cy
+            .visit(loginPage.url)
+            .get(loginPage.emailField).clear()
+            .get(loginPage.passwordField).clear();
     });
 
-    const lp = new LoginPage();  //lp is shortform for Login Page object
-    const dp = new DashboardPage(); // dp is shortform for Dashboard Page Object
-
-    //Logs the user in, verifies page title and account info, logs out, then verifies page title again
-    it("Login with correct credentials should be successful", () => {
-        lp.pageHeading().contains("Admin area demo");
-        lp.enterEmail(johnSmith.email);
-        lp.enterPassword(johnSmith.password);
-        lp.clickLogin();
-        cy.title().should("eq", dp.title());
-        cy.url().should("include", "/admin");
-        dp.accountInfo().contains(`${johnSmith.firstName} ${johnSmith.lastName}`);
-        dp.clickLogout();
-        cy.title().should("eq", lp.title());
+    it('Login with correct credentials should be successful', () => {
+        cy
+            .get(loginPage.pageHeading)
+            .should('contain', 'Admin area demo')
+            .get(loginPage.welcomeMessage)
+            .should('exist')
+            .and('contain', 'Welcome, please sign in!')
+            .get(loginPage.emailField)
+            .type(johnSmith.email)
+            .get(loginPage.passwordField)
+            .type(johnSmith.password)
+            .get(loginPage.loginButton)
+            .click()
+            .title().should('eq', dashboardPage.title)
+            .url().should('include', '/admin')
+            .get(dashboardPage.accountInfo).should('exist')
+            .and('contain', `${johnSmith.firstName} ${johnSmith.lastName}`)
+            .get(dashboardPage.logoutButton).click()
+            .title().should('contain', loginPage.title);
     });
 
-    //Tries to login with invalid user details
-    it("Login with invalid credentials should not be successful", () => {
-        lp.enterEmail(randomUser.email);
-        lp.enterPassword(randomUser.password);
-        lp.clickLogin();
-        lp.loginError().contains("Login was unsuccessful. Please correct the errors and try again.");
+    it('Login with invalid credentials should not be successful', () => {
+        cy
+            .get(loginPage.emailField)
+            .type(randomUser.email)
+            .get(loginPage.passwordField)
+            .type(randomUser.password)
+            .get(loginPage.loginButton).click()
+            .get(loginPage.loginError)
+            .should('contain', 'Login was unsuccessful. Please correct the errors and try again.');
     });
 
-    // //Tries to login with invalid user details
-    // it("Empty credentials should show an error message", () => {
-    //     lp.enterEmail();
-    //     lp.enterPassword();
-    //     lp.clickLogin();
-    //     lp.emailError().contains("Please enter your email");
-    // });
 });
