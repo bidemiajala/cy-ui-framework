@@ -1,5 +1,5 @@
 {
-  "name": "igr-cy",
+  "name": "cy-ui-framework",
   "version": "1.0.0",
   "description": "Testing a sample login function with Cypress.io",
   "main": "index.js",
